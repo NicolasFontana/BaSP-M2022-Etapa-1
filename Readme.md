@@ -1,1 +1,2 @@
-# BaSP-M2022-Etapa-1
+# Trackgenix landing page
+This project is the html code for the landing page of the Trackgenix SA website.
