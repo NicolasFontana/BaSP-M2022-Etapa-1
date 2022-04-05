@@ -271,8 +271,12 @@ footer {
   border-radius: 4px;
 }
 
-/* Sección: "What can you do? */
+/* Section: "What can you do? */
 
+.container-cards {
+  position: relative;
+  top: 75px;
+}
 
 .utilities {
   position: relative;
@@ -287,6 +291,7 @@ footer {
 .card-utilities {
   display: inline-block;
   width: 522px;
+  margin-bottom: 97px;
 }
 
 .text-card {
@@ -301,7 +306,51 @@ footer {
   left: 10px;
 }
 
+.card-utilities:nth-child(3) .text-card {
+  position: relative;
+  top: 6px;
+
+}
+
 .text-card h4 {
   font-weight: 700;
+}
+
+/* Section: "Why use trackgenix?" */
+
+.section-why {
+  margin-top: 125px;
+  margin-left: 7px;
+}
+
+.section-why h3 {
+  width: 888px;
+  padding-bottom: 19px;
+  border-bottom: 5px solid #AACE9B;
+}
+
+.section-why ul {
+  margin-left: 78px;
+  margin-top: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 400;
+}
+
+.section-why ul li {
+  margin-bottom: 36px;
+}
+
+/* Section: "Contact form" */
+
+.section-contact {
+  margin-left: 7px;
+}
+
+.section-contact h3 {
+  width: 888px;
+  padding-bottom: 19px;
+  border-bottom: 5px solid #AACE9B;
 }
 
