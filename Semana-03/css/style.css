@@ -15,13 +15,13 @@ h1 {
   position: relative;
   left: 122px;
   top: 75px;
+  width: 80%;
+  padding-bottom: 30px;
+  border-bottom: 5px solid #AACE9B;
   font-family: 'Raleway';
   font-weight: 400;
   font-size: 30px;
   -webkit-text-stroke: 1px;
-  width: 80%;
-  border-bottom: 5px solid #AACE9B;
-  padding-bottom: 30px;
 }
 
 aside {
@@ -63,11 +63,12 @@ footer {
     height: 156px;
     width: 81vw;
     background-color: #FFF;
+    border-top: 5px solid #AACE9B;
     z-index: 100;
     text-align: center;
-    border-top: 5px solid #AACE9B;
-    vertical-align: middle;
 }
+
+/* Section: Sidebar */
 
 .burguer-icon {
   position: absolute;
@@ -126,8 +127,8 @@ footer {
 }
 
 .menu > ul {
-  margin-top: 74px;
   width: 100%;
+  margin-top: 74px;
 }
 
 .menu > ul > li:nth-child(1), .menu > ul > li:nth-child(2) {
@@ -137,8 +138,8 @@ footer {
 }
 
 .menu > ul > li:nth-child(3) {
-  border-bottom: 1px solid #A4A4A4;
   padding-bottom: 73px;
+  border-bottom: 1px solid #A4A4A4;
 }
 
 .menu > ul > li > a {
@@ -180,8 +181,8 @@ footer {
 
 .contact ul li {
   width: 100%;
-  border-bottom: 1px solid #A4A4A4;
   padding-bottom: 19px;
+  border-bottom: 1px solid #A4A4A4;
 }
 
 .contact ul li:nth-child(3) {
@@ -198,12 +199,12 @@ footer {
 
 .contact ul li a {
   width: 100%;
-  text-decoration: none;
   color: #545454;
   font-family: 'Raleway', sans-serif;
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
+  text-decoration: none;
 }
 
 .image-icon {
@@ -212,23 +213,25 @@ footer {
 
 .text-contact-email {
   position: absolute;
-  margin-left: 15px;
   width: 86%;
+  margin-left: 15px;
 }
 
 .text-contact-home {
-  position: absolute;
-  margin-left: 14px;
-  width: 86%;
   display: inline-block;
+  position: absolute;
+  width: 86%;
+  margin-left: 14px;
 }
 
 .text-contact-phone {
-  width: 86%;
   position: absolute;
+  width: 86%;
   margin-left: 14px;
   margin-top: 14px;
 }
+
+/* Section: Welcome */
 
 .section-welcome {
   position: relative;
@@ -253,13 +256,12 @@ footer {
   font-style: italic;
   line-height: 42px;
   font-size: 28px;
-  
 }
 
 .section-welcome > p:nth-child(3) {
-  color: rgba(0, 0, 0, 0.44);
   width: 557px;
   margin-top: 76px;
+  color: rgba(0, 0, 0, 0.44);
   font-family: 'Poppins', sans-serif;
   font-size: 24px;
   font-weight: 400;
@@ -267,25 +269,25 @@ footer {
 }
 
 .section-welcome > img:nth-child(4) {
-  width: 469px;
-  height: 584px;
   position: absolute;
   top: 0px;
   left: 558px;
+  width: 469px;
+  height: 584px;
 }
 
 .btn-learn-more {
-  font-family: 'Poppins', sans-serif;
-  font-size: 13px;
-  font-weight: 400;
   margin-top: 75px;
   width: 144px;
   height: 50px;
   color: #373867;
   background: #AACE9B;
   border: 1px solid #373867;
-  box-sizing: border-box;
   border-radius: 4px;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
 }
 
 /* Section: "What can you do? */
@@ -316,14 +318,14 @@ footer {
 
 .text-card {
   display: inline-block;
+  position: relative;
+  bottom: 40px;
+  left: 10px;
   width: 300px;
   font-family: 'Popins', sans-serif;
   font-size: 28px;
   font-weight: 400;
   line-height: 42px;
-  position: relative;
-  bottom: 40px;
-  left: 10px;
 }
 
 .card-utilities:nth-child(3) .text-card {
@@ -391,7 +393,6 @@ footer {
   height: 516px;
   background: rgba(178, 209, 165, 0.24);;
   margin-top: 84px;
-
 }
 
 .container-form {
@@ -454,9 +455,9 @@ footer {
 }
 
 .phone {
+  display: inline-block;
   position: relative;
   bottom: 20px;
-  display: inline-block;
   width: 45%;
 }
 
@@ -477,19 +478,19 @@ footer {
 }
 
 .container-btn-send {
-  text-align: end;
   margin-right: 50px;
+  text-align: end;
 }
 
 .btn-send {
   width: 158px;
   height: 36px;
   margin-top: 32px;
-  color: #373867;
-  text-align: center;
   background-color: #AACE9B;
+  color: #373867;
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
+  text-align: center;
 }
 
 /* Section: "Trackgenix History" */
@@ -513,19 +514,19 @@ footer {
   top: 40px;
   left: 60px;
   width: 80%;
+  height: 604px;
   background-color: rgba(178, 209, 165, 0.24);
   border-radius: 50%;
-  height: 604px;
 }
 
 .tittle-history {
   position: relative;
   left: 340px;
   top: 150px;
+  color: #756464;
   font-family: 'Poppins', sans-serif;
   font-size: 30px;
   font-weight: 500;
-  color: #756464;
 }
 
 .tittle-history-span {
@@ -575,24 +576,24 @@ footer {
 
 .container-items {
   margin-top: 120px;
-  text-align: center;
   padding-bottom: 200px;
+  text-align: center;
 }
 
 .container-subitems {
   display: inline-block;
   width: 20%;
-  text-align: start;
   margin-right: 100px;
+  text-align: start;
 }
 
 .container-subitems h4 {
+  border-bottom: 5px solid #AACE9B;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
-  border-bottom: 5px solid #AACE9B;
 }
 
 .container-subitems ol li {
@@ -623,25 +624,25 @@ footer {
 }
 
 .location {
+  margin-bottom: 7px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  margin-bottom: 7px;
 }
 
-footer div a img{
+.container-footer div a img{
   width: 30px;
-  color: #545454;
   margin-right: 25px;
+  color: #545454;
 }
 
 .rights-reserved {
+  margin-top: 7px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
-  margin-top: 7px;
 }
