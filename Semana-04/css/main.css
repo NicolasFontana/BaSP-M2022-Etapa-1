@@ -1,0 +1,193 @@
+main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 21px 0 4px
+}
+
+/* Section: welcome */
+.container-welcome {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-welcome h2 {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 30px 0;
+  align-self: center;
+}
+
+.container-welcome div {
+  display: flex;
+  align-items: flex-start;
+}
+
+.container-welcome div p {
+  font-family: 'Poppins';
+  font-size: 28px;
+  line-height: 42px;
+  flex: 0 1 70%
+}
+
+.container-welcome div img {
+  width: 30%
+}
+
+.container-welcome button {
+  display: none;
+}
+
+/* Section: what can you do? */
+
+.container-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container-cards .card-utilities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 27px;
+}
+
+.container-cards .card-utilities .text-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 17px 21px 0 21px;
+}
+
+.text-card h4 {
+  font-size: 30px;
+  line-height: 35px;
+  font-weight: 700;
+}
+.text-card p {
+  text-align: center;
+}
+
+/* Section: why */
+
+.container-why ul {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.container-why ul {
+  margin: 10px 0 0 21px;
+  list-style-type: '✓';
+}
+
+.container-why ul li {
+  margin-top: 23px;
+}
+
+.container-why ul span {
+  margin-left: 18px;
+}
+
+/* Section: contact form */
+
+.contact-form {
+  display: flex;
+  background-color: #b2d1a53d;
+  justify-content: center;
+  margin: 30px 9px 0 4px;
+  border: 2px solid #9E9E9E;
+  border-radius: 2px;
+}
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  color: #000000;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16.41px;
+  margin: 14px 0 14px 0;
+}
+
+.bussines-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+}
+
+.phone {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-message {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-message input[type="text"] {
+  height: 110px;
+}
+
+.email, .contact-area, .phone, input[type="text"] {
+  margin-bottom: 23px;
+}
+
+.container-btn-send {
+  align-self: center;
+}
+
+.btn-send {
+  background-color: #AACE9B;
+  border: 1px solid #373867;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 10px 24px 10px 24px
+}
+
+
+/* Section: Trackgenix history */
+
+.container-history-company h4, .info-circles, .img-history {
+  display: none;
+}
+
+/* Section: items */
+
+.container-items {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-bottom: 53px;
+}
+
+.container-subitems {
+  width: 100%;
+  margin-top: 43px;
+}
+
+.container-subitems h4 {
+  font-size: 30px;
+  font-weight: 700;
+  border-bottom: 5px solid #AACE9B;
+  padding-bottom: 11px ;
+  display: inline-block;
+}
+
+.container-subitems ol {
+  margin-left: 24px;
+  margin-top: 15px;
+  list-style-type: decimal;
+}
+
+.container-subitems ol li a:hover {
+  color: #9E9E9E;
+}

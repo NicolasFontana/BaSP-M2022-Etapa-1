@@ -1,0 +1,21 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #373867;
+  line-height: 23px;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 700;
+  border-bottom: 5px solid #AACE9B;
+  padding-bottom: 11px ;
+  margin-top: 33px;
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: #373867;
+}

@@ -1,0 +1,35 @@
+footer {
+  color: #545454;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.container-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #EDEDED;
+  border-top: 5px solid #AACE9B;
+  padding: 15px 20px 15px 20px;
+}
+
+.container-footer .location {
+  margin-top: 14px;
+}
+
+.container-footer div {
+  display: flex;
+  order: -1;
+}
+
+.container-footer div a {
+  display: flex;
+  width: 24px;
+  color: #545454;
+  margin: 0 12px 0 12px;
+}
+
+.container-footer .rights-reserved {
+  text-align: center;
+  margin-top: 14px;
+}
