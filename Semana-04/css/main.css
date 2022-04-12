@@ -1,20 +1,31 @@
 main {
   display: flex;
   flex-direction: column;
-  margin: 0 21px 0 21px
+  margin: 0 21px 0 21px;
 }
 
 /* Section: welcome */
 .container-welcome {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .container-welcome h2 {
   font-size: 30px;
   font-weight: 700;
   padding: 30px 0;
-  align-self: center;
+  text-align: center;
+  width: 100%;
+}
+
+.container-welcome .container-text {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.container-welcome .container-img {
+  width: 30%;
 }
 
 .container-welcome div {
@@ -28,8 +39,12 @@ main {
   line-height: 42px;
 }
 
+.txt-info {
+  display: none;
+}
+
 .container-welcome div img {
-  width: 30%
+  width: 100%
 }
 
 .container-welcome button {
@@ -50,6 +65,7 @@ main {
   justify-content: center;
   margin-top: 27px;
   text-align: center;
+  align-items: center;
 }
 
 .container-cards .card-utilities .text-card {
@@ -127,6 +143,11 @@ main {
   flex-direction: column;
 }
 
+.item-contact {
+  font-size: 12px;
+  font-weight: 300;
+}
+
 .container-message {
   display: flex;
   flex-direction: column;
@@ -134,6 +155,7 @@ main {
 
 .container-message input[type="text"] {
   height: 110px;
+  text-align: start;
 }
 
 .email, .contact-area, .phone, input[type="text"] {
@@ -174,7 +196,6 @@ main {
 .container-items {
   display: flex;
   flex-wrap: wrap;
-
   margin-bottom: 53px;
 }
 
@@ -202,13 +223,66 @@ main {
 }
 
 @media only screen and (min-width: 768px) {
+  /* Section: what can you do? */
   .card-utilities {
     width: 50%;
   }
-
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1440px) {
+  .container-welcome .txt-welcome {
+    width: 100%;
+  }
+  
+  .container-welcome h2 {
+    text-align: start;
+    font-size: 64px;
+    line-height: 96px;
+    font-weight: 600;
+    z-index: 10;
+    width: 40%;
+  }
+
+  .container-welcome .container-text {
+    width: 55%;
+  }
+
+  .container-text p:nth-child(1) {
+    width: 50%;
+    margin-top: 60px;
+  }
+
+  .container-text p:nth-child(2) {
+    margin-top: 34px;
+  }
+
+  .container-welcome .container-img {
+    width: 45%;
+    position: relative;
+    bottom: 200px;
+    z-index: -1;
+  }
+
+  .container-welcome .txt-info {
+    display: block;
+    font-size: 24px;
+    line-height: 36px;
+    color: #00000070;
+  }
+
+  .container-welcome button {
+    display: block;
+    margin-top: 75px;
+    font-size: 13px;
+    color: #373867;
+    background: #AACE9B;
+    border: 1px solid #373867;
+    border-radius: 4px;
+    padding: 17px 25px;
+  }
+
+  /* Section: what can you do? */
+
   .container-cards {
     justify-content: flex-start;
   }
@@ -216,7 +290,7 @@ main {
   .container-cards .card-utilities {
     justify-content: flex-start;
     flex-wrap: nowrap;
-    
+    text-align: start;
   }
 
   .container-cards .card-utilities .text-card {
@@ -225,5 +299,41 @@ main {
 
   .text-card p {
     text-align: left;
+  }
+
+  /* Section: Contact form */
+  .container-form {
+    margin: 80px 0;
+  }
+
+  .container-form .input-text, .container-form input[type="number"], .container-form input[type="email"] {
+    height: 43px;
+  }
+
+  .container-name-email {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .bussines-name {
+    width: 45%;
+  }
+
+  .email {
+    width: 45%;
+  }
+
+  .container-contact-phone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contact-area {
+    width: 45%;
+  }
+
+  .phone {
+    width: 45%;
   }
 }
