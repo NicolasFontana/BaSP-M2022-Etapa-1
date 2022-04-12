@@ -4,6 +4,7 @@ header {
   align-items: center;
   background-color: #EDEDED;
   border-bottom: 5px solid #AACE9B;
+  flex: 1 1;
 }
 
 header h1{

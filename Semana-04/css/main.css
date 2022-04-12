@@ -1,7 +1,7 @@
 main {
   display: flex;
   flex-direction: column;
-  margin: 0 21px 0 4px
+  margin: 0 21px 0 21px
 }
 
 /* Section: welcome */
@@ -26,7 +26,6 @@ main {
   font-family: 'Poppins';
   font-size: 28px;
   line-height: 42px;
-  flex: 0 1 70%
 }
 
 .container-welcome div img {
@@ -50,6 +49,7 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 27px;
+  text-align: center;
 }
 
 .container-cards .card-utilities .text-card {
@@ -64,6 +64,7 @@ main {
   line-height: 35px;
   font-weight: 700;
 }
+
 .text-card p {
   text-align: center;
 }
@@ -160,6 +161,14 @@ main {
   display: none;
 }
 
+.container-history-company {
+  margin-top: 15px;
+}
+
+.txt-two {
+  margin-top: 15px;
+}
+
 /* Section: items */
 
 .container-items {
@@ -190,4 +199,31 @@ main {
 
 .container-subitems ol li a:hover {
   color: #9E9E9E;
+}
+
+@media only screen and (min-width: 768px) {
+  .card-utilities {
+    width: 50%;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+  .container-cards {
+    justify-content: flex-start;
+  }
+
+  .container-cards .card-utilities {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    
+  }
+
+  .container-cards .card-utilities .text-card {
+    align-items: flex-start;
+  }
+
+  .text-card p {
+    text-align: left;
+  }
 }

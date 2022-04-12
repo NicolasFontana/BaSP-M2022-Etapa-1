@@ -4,6 +4,10 @@ body{
   font-weight: 400;
   color: #373867;
   line-height: 23px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: start;
 }
 
 h3 {
@@ -18,4 +22,18 @@ h3 {
 a {
   text-decoration: none;
   color: #373867;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    margin-left: 35vw;
+    width: 65vw;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    margin-left: 30vw;
+    width: 70vw;
+  }
 }
