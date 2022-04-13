@@ -1,17 +1,17 @@
 header {
   display: flex;
+  flex: 1 1;
   padding: 10px 0;
   align-items: center;
-  background-color: #EDEDED;
   border-bottom: 5px solid #AACE9B;
-  flex: 1 1;
+  background-color: #EDEDED;
 }
 
 header h1{
+  margin-left: 17px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   font-size: 40px;
-  margin-left: 17px;
 }
 
 header img {

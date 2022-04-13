@@ -5,17 +5,18 @@ main {
 }
 
 /* Section: welcome */
+
 .container-welcome {
   display: flex;
   flex-wrap: wrap;
 }
 
 .container-welcome h2 {
+  width: 100%;
+  padding: 30px 0;
   font-size: 30px;
   font-weight: 700;
-  padding: 30px 0;
   text-align: center;
-  width: 100%;
 }
 
 .container-welcome .container-text {
@@ -63,9 +64,9 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   margin-top: 27px;
   text-align: center;
-  align-items: center;
 }
 
 .container-cards .card-utilities .text-card {
@@ -92,7 +93,6 @@ main {
   flex-direction: column;
 }
 
-
 .container-why ul {
   margin: 10px 0 0 21px;
   list-style-type: '✓';
@@ -110,22 +110,22 @@ main {
 
 .contact-form {
   display: flex;
-  background-color: #b2d1a53d;
   justify-content: center;
   margin: 30px 9px 0 4px;
   border: 2px solid #9E9E9E;
   border-radius: 2px;
+  background-color: #b2d1a53d;
 }
 
 .container-form {
   display: flex;
   flex-direction: column;
   width: 80%;
+  margin: 14px 0 14px 0;
   color: #000000;
   font-weight: 700;
   font-size: 14px;
   line-height: 16.41px;
-  margin: 14px 0 14px 0;
 }
 
 .bussines-name {
@@ -167,15 +167,14 @@ main {
 }
 
 .btn-send {
-  background-color: #AACE9B;
+  padding: 10px 24px 10px 24px;
   border: 1px solid #373867;
   border-radius: 5px;
+  background-color: #AACE9B;
   font-size: 18px;
   font-weight: 500;
   text-transform: uppercase;
-  padding: 10px 24px 10px 24px
 }
-
 
 /* Section: Trackgenix history */
 
@@ -205,11 +204,11 @@ main {
 }
 
 .container-subitems h4 {
+  display: inline-block;
+  padding-bottom: 11px;
+  border-bottom: 5px solid #AACE9B;
   font-size: 30px;
   font-weight: 700;
-  border-bottom: 5px solid #AACE9B;
-  padding-bottom: 11px;
-  display: inline-block;
 }
 
 .container-subitems ol {
@@ -232,19 +231,18 @@ main {
 }
 
 @media only screen and (min-width: 1440px) {
-
   /* Section: welcome */
   .container-welcome .txt-welcome {
     width: 100%;
   }
   
   .container-welcome h2 {
-    text-align: start;
+    width: 40%;
     font-size: 64px;
     line-height: 96px;
     font-weight: 600;
+    text-align: start;
     z-index: 10;
-    width: 40%;
   }
 
   .container-welcome .container-text {
@@ -261,28 +259,28 @@ main {
   }
 
   .container-welcome .container-img {
-    width: 45%;
     position: relative;
+    width: 45%;
     bottom: 200px;
     z-index: -1;
   }
 
   .container-welcome .txt-info {
     display: block;
+    color: #00000070;
     font-size: 24px;
     line-height: 36px;
-    color: #00000070;
   }
 
   .container-welcome button {
     display: block;
+    padding: 17px 25px;
     margin-top: 75px;
-    font-size: 13px;
-    color: #373867;
-    background: #AACE9B;
     border: 1px solid #373867;
     border-radius: 4px;
-    padding: 17px 25px;
+    background: #AACE9B;
+    color: #373867;
+    font-size: 13px;
     cursor: pointer;
   }
 

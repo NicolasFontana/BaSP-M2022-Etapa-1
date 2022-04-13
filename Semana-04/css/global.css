@@ -1,41 +1,40 @@
 body{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: start;
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: 400;
   color: #373867;
   line-height: 23px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: start;
   overflow-x: hidden;
 }
 
 h3 {
-  display: block;
-  font-size: 30px;
-  font-weight: 700;
-  border-bottom: 5px solid #AACE9B;
+  display: inline-block;
   padding-bottom: 11px;
   margin-top: 33px;
-  display: inline-block;
+  border-bottom: 5px solid #AACE9B;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 a {
-  text-decoration: none;
   color: #373867;
+  text-decoration: none;
 }
 
 @media only screen and (min-width: 768px) {
   body {
-    margin-left: 35vw;
     width: 65vw;
+    margin-left: 35vw;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   body {
-    margin-left: 30vw;
     width: 70vw;
+    margin-left: 30vw;
   }
 }
