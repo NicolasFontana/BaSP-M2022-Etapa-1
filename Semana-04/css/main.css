@@ -208,7 +208,7 @@ main {
   font-size: 30px;
   font-weight: 700;
   border-bottom: 5px solid #AACE9B;
-  padding-bottom: 11px ;
+  padding-bottom: 11px;
   display: inline-block;
 }
 
@@ -222,6 +222,8 @@ main {
   color: #9E9E9E;
 }
 
+/* Media queries */
+
 @media only screen and (min-width: 768px) {
   /* Section: what can you do? */
   .card-utilities {
@@ -230,6 +232,8 @@ main {
 }
 
 @media only screen and (min-width: 1440px) {
+
+  /* Section: welcome */
   .container-welcome .txt-welcome {
     width: 100%;
   }
@@ -279,6 +283,7 @@ main {
     border: 1px solid #373867;
     border-radius: 4px;
     padding: 17px 25px;
+    cursor: pointer;
   }
 
   /* Section: what can you do? */
@@ -302,6 +307,7 @@ main {
   }
 
   /* Section: Contact form */
+
   .container-form {
     margin: 80px 0;
   }
@@ -335,5 +341,11 @@ main {
 
   .phone {
     width: 45%;
+  }
+
+  /* Section: items */
+
+  .container-subitems {
+    flex: 1;
   }
 }
