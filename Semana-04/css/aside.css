@@ -1,5 +1,4 @@
 aside {
-  display: flex;
   display: none;
   flex: 0 0 200px;
   border-right: 1px solid #000000;
