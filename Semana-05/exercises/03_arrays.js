@@ -1,34 +1,47 @@
-//Dado el siguiente array: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"] mostrar por consola los meses 5 y 11 (utilizar console.log).
+// Given the following array: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] show by console the months 5 and 11 (use console.log).
 
-var arr = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+var arrA = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
-console.log(arr[4])
-console.log(arr[10])
+console.log(arrA[4])
+console.log(arrA[10])
 
-//Ordenar el array de meses alfabéticamente y mostrarlo por consola (utilizar sort).
+// Sort the month array alphabetically and display it on the console (use sort).
 
-console.log(arr.sort())
+var arrB = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+console.log(arrB.sort())
 
-//Agregar un elemento al principio y al final del array (utilizar unshift y push).
+// Add an element to the beginning and end of the array (use unshift and push).
 
-arr.push('Ultimo')
-arr.unshift('Primero')
+arrC = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
-console.log(arr)
+arrC.push('Last')
+arrC.unshift('First')
 
-//Quitar un elemento del principio y del final del array (utilizar shift y pop).
+console.log(arrC)
 
-arr.shift()
-arr.pop()
+// Remove an element from the beginning and end of the array (use shift and pop).
 
-console.log(arr)
+var arrD = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
-//Invertir el orden del array (utilizar reverse).
+arrD.shift()
+arrD.pop()
 
-console.log(arr.reverse())
+console.log(arrD)
 
-//Unir todos los elementos del array en un único string donde cada mes este separado por un guión - (utilizar join).
+// Reverse the order of the array (use reverse).
 
-console.log(arr.join(" - "))
+var arrE = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] 
 
-//Crear una copia del array de meses que contenga desde Mayo hasta Noviembre (utilizar slice).
+console.log(arrE.reverse())
+
+// Join all the elements of the array into a single string where each month is separated by a hyphen - (use join).
+
+var arrF = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] 
+
+console.log(arrF.join(" - "))
+
+// Create a copy of the month array containing May through November (use slice).
+
+var arrayG = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+console.log(arrayG.slice(4))
