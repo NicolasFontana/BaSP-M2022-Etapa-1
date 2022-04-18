@@ -1,26 +1,26 @@
-// Crear un array que contenga 5 palabras y recorrer dicho array utilizando un bucle for de JavaScript para mostrar una alerta utilizando cada una de las palabras.
+// Create an array containing 5 words and iterate through that array using a JavaScript for loop to display an alert using each of the words.
 
-var animales = ['perro', 'gato', 'pez', 'tortuga', 'leopardo']
-for (var i = 0; i < animales.length; i++) {
-  // alert(animales[i])
+var animals = ['dog', 'cat', 'fish', 'turtle', 'leopard']
+for (var i = 0; i < animals.length; i++) {
+  alert(animals[i])
 }
 
-// Al array anterior convertir la primera letra de cada palabra en mayúscula y mostrar una alerta por cada palabra modificada.
+// To the above array, convert the first letter of each word to uppercase and display an alert for each modified word.
 
-for (var i = 0; i < animales.length; i++) {
-  animales[i] = animales[i].substring(0,1).toUpperCase() + animales[i].substring(1)
-  alert(animales[i])
+for (var i = 0; i < animals.length; i++) {
+  animals[i] = animals[i].substring(0,1).toUpperCase() + animals[i].substring(1)
+  alert(animals[i])
 }
 
-// Crear una variable llamada “sentence” que tenga un string vacío, luego al array del punto a) recorrerlo con un bucle for para ir guardando cada palabra dentro de la variable sentence. Al final mostrar una única alerta con la cadena completa.
+// Create a variable called “sentence” that has an empty string, then go through the array from point a) with a for loop to save each word inside the sentence variable. At the end show a single alert with the complete chain.
 
 var sentence = ''
-for (var i = 0; i < animales.length; i++) {
-  sentence += animales[i] + " "
+for (var i = 0; i < animals.length; i++) {
+  sentence += animals[i] + " "
 }
 alert(sentence)
 
-// Crear una array vacío y con un bucle for de 10 repeticiones. Llenar el array con el número de la repetición, es decir que al final de la ejecución del bucle for debería haber 10 elementos dentro del array, desde el número 0 hasta al número 9. Mostrar por la consola del navegador el array final (utilizar console.log).
+// Create an empty array and with a for loop of 10 repetitions. Fill the array with the repetition number, that is, at the end of the execution of the for loop there should be 10 elements inside the array, from number 0 to number 9. Show the final array in the browser console (use console .log).
 
 var arr = []
 for (var i = 0; i < 10; i++) {
