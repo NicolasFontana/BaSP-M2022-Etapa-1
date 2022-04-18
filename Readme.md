@@ -5,7 +5,7 @@ This project is the html code for the landing page of the Trackgenix SA website.
 To open the project you can download or clone the repository, and then open the index.html with your browser.
 ## How to open? (online)
 ```
-1- Open this [link]
+1- Open this [link](https://nicolasfontana.github.io/BaSP-M2022-Etapa-1/)
 2- Add "Semana-01", "Semana-02", "Semana-03"... at the end of the link on the address bar. For example: "https://nicolasfontana.github.io/BaSP-M2022-Etapa-1/Semana-04"
 ```
 ## Week-01
@@ -19,6 +19,3 @@ This week I made the CSS style sheet applying flexbox and mediaqueries, to achie
 
 ## Week-05
 In this week I solved the javascript exercises.
-
-
-[link]: <https://github.com/joemccann/dillinger.git>
