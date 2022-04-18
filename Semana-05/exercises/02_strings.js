@@ -35,5 +35,4 @@ var indexN = nz.indexOf('n')
 var indexZ = nz.indexOf('z')
 
 var NZ = nz.substring(indexN, indexN + 1).toUpperCase() + nz.substring(indexN + 1, indexZ).toLowerCase() + nz.substring(indexZ, indexZ + 1).toUpperCase() + nz.substring(indexZ + 1, nz.length).toLowerCase()
-
 console.log(NZ)
