@@ -4,10 +4,11 @@ This project is the html code for the landing page of the Trackgenix SA website.
 ## How to open? (offline)
 To open the project you can download or clone the repository, and then open the index.html with your browser.
 ## How to open? (online)
-```
-1- Open this [link](https://nicolasfontana.github.io/BaSP-M2022-Etapa-1/)
-2- Add "Semana-01", "Semana-02", "Semana-03"... at the end of the link on the address bar. For example: "https://nicolasfontana.github.io/BaSP-M2022-Etapa-1/Semana-04"
-```
+
+>1- Open this [link](https://nicolasfontana.github.io/BaSP-M2022-Etapa-1/).
+
+>2- Add "Semana-01", "Semana-02", "Semana-03"... at the end of the link on the address bar. For example: "https://nicolasfontana.github.io/BaSP-M2022-Etapa-1/Semana-04"
+
 ## Week-01
 This week we worked in groups applying agile methodologies to design a web page in Figma.
 ## Week-02
