@@ -17,6 +17,5 @@ Created the HTML structure of the page previously designed in Figma.
 Created the CSS style sheet to recreate the landing page design previously done in Figma.
 ## Week-04
 This week I made the CSS style sheet applying flexbox and mediaqueries, to achieve a page with responsive design.
-
 ## Week-05
 In this week I solved the javascript exercises.
