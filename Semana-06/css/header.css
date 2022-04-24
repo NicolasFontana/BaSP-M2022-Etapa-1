@@ -1,8 +1,9 @@
 header {
   display: flex;
-  flex: 1 1;
   padding: 10px 0;
+  width: 100vw;
   align-items: center;
+  align-self: flex-start;
   border-bottom: 5px solid #AACE9B;
   background-color: #EDEDED;
 }
