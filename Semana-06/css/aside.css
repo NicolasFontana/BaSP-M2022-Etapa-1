@@ -1,0 +1,136 @@
+aside {
+  display: none;
+  flex: 0 0 200px;
+  border-right: 1px solid #000000;
+  background-color: #e0e0e025;
+  font-family: 'Raleway';
+  font-weight: 400;
+}
+
+.bg-search {
+  position: absolute;
+  height: 70px;
+  width: 100%;
+  background: #EDEDED;
+  z-index: -1;
+}
+
+.contact ul li a {
+  display: flex ;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.search img{
+  position: absolute;
+  width: 15px;
+  margin: 8px 0 0 9px;
+}
+
+.search input {
+  width: 85%;
+  height: 30px;
+  border: 1px solid #373867;
+  border-radius: 5px;
+}
+
+.search input::placeholder {
+  padding-left: 30px;
+}
+
+.menu {
+  margin-top: 50px;
+}
+
+.text-menu {
+  display: inline-block;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  border-bottom: 5px solid #AACE9B;
+  font-size: 24px;
+}
+
+.menu ul li{
+  margin-top: 30px;
+  border-bottom: 1px solid #545454;
+  color: #545454;
+}
+
+.menu ul li:nth-child(1){
+  margin-top: 30px;
+  border-bottom: 1px solid #373867;
+  font-weight: 600;
+}
+
+.menu ul li a{
+  color: #545454;
+}
+
+.menu ul li:nth-child(1) a{
+  color: #373867;
+}
+
+.get-in-touch {
+  display: inline-block;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  margin-top: 44px;
+  border-bottom: 5px solid #AACE9B;
+  font-size: 24px;
+}
+
+.text-get-in-touch {
+  margin-top: 21px;
+  font-size: 18px;
+}
+
+.contact ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 83px;
+}
+
+.contact ul li {
+  display: flex;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  border-bottom: 1px solid #A4A4A4;
+  font-size: 16px;
+}
+
+.contact ul li:nth-child(3) {
+  border-bottom: none;
+}
+
+.contact ul li a img {
+  width: 30px;
+}
+
+.contact ul li a span {
+  margin-left: 10px;
+}
+
+@media only screen and (min-width: 768px)  {
+  aside {
+    display:  flex;
+    position: fixed;
+    width: 35vw;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 1440px)  {
+  aside {
+    width: 30vw;
+  }
+}
