@@ -32,7 +32,7 @@
           <ul>
             <li><a href="./index.html">Home</a></li>
             <li><a href="#">Sign Up</a></li>
-            <li><a href="./login.html">Log In</a></li>
+            <li class="menu-active"><a href="./login.html">Log In</a></li>
           </ul>
         </div>
         <div class="contact-text">
@@ -61,20 +61,23 @@
     <main>
       <div class="container-login">
         <h3>Log In</h3>
-        <form>
+        <form id="logInForm">
           <label class="email" >Email</label>
-          <input type="email" placeholder="Email address">
+          <input id="formEmail" class="emailValue" type="email" placeholder="Email address">
+          <div id="validEmail"></div>
           <label class="txt-pass">Password</label>
-          <input type="password" placeholder="Password">
+          <input id="formPassword" class="passwordValue" type="password" placeholder="Password">
+          <div id="validPassword"></div>
           <div class="container-remember-forgot">
             <div>
               <input type="checkbox">
               <label>Remember me</label>
             </div>
-            <label>Forgot password?</label>
+            <label><a href="./login.html">Forgot password?</a></label>
           </div>
-          <input type="submit" value="Log In">
+          <input id="btnSubmit" type="submit" value="Log In">
         </form>
+        <div id="validationResult"></div>
       </div>  
     </main>
     <footer>
@@ -89,5 +92,7 @@
         <p class="rights-reserved">Copyright © 2022 Radium Rocket. All rights reserved.</p>
       </div>
     </footer>
+    <!-- Script JS -->
+    <script src="../javascript/login.js"></script>
   </body>
 </html>

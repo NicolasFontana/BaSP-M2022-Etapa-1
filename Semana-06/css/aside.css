@@ -60,20 +60,20 @@ nav {
 .menu ul li{
   margin-top: 30px;
   border-bottom: 1px solid #545454;
+}
+
+.menu ul li a {
   color: #545454;
 }
 
-.menu ul li:nth-child(1){
+
+.menu ul .menu-active {
   margin-top: 30px;
-  border-bottom: 1px solid #373867;
+  border-bottom: 2px solid #373867;
   font-weight: 600;
 }
 
-.menu ul li a{
-  color: #545454;
-}
-
-.menu ul li:nth-child(1) a{
+.menu ul .menu-active a{
   color: #373867;
 }
 

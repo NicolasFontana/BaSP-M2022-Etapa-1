@@ -8,6 +8,8 @@ main {
   flex-direction: column;
 }
 
+/* Main */
+
 .container-login {
   display: flex;
   flex-direction: column;
@@ -19,7 +21,6 @@ main {
   margin-top: 0;
   padding-bottom: 88px;
   font-family: 'Raleway';
-  font-style: italic;
   font-weight: 400;
   font-size: 49px;
   line-height: 58px;
@@ -43,7 +44,7 @@ main {
   padding-bottom: 10px;
 }
 
-.container-login form input[type="email"], .container-login form input[type="password"]{
+.container-login .emailValue, .container-login .passwordValue{
   border: 1px solid #373867;
   border-radius: 4px;
   padding: 10px 10px;
@@ -83,16 +84,53 @@ main {
 
 .container-login form input[type="submit"] {
   border: 1px solid #373867;
+  border-radius: 3px;
   background: #AACE9B;
   font-family: 'Roboto';
-  font-style: italic;
   font-weight: 400;
   font-size: 24px;
   line-height: 28px;
   color: #373867;
   margin-top: 115px;
   padding: 10px 0;
+  cursor: pointer;
 }
+
+/* Validation */
+
+.container-login .is-valid {
+  border-color: #198754;
+  background-color: #19875409;
+}
+
+.container-login .is-invalid {
+  border: 1px solid #dc3545;
+  background-color: #dc354607;
+}
+
+.validationErrorContainer, .validationSuccessContainer {
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.validationErrorContainer {
+  color: #dc3545;
+}
+
+.validationSuccessContainer {
+  color: #198754;
+}
+
+#validEmail p, #validPassword p{
+  margin-top: 10px;
+  color: #dc3545;
+  font-size: 13px;
+}
+
+/* MediaQueries */
 
 @media only screen and (min-width: 768px)  {
   .container-login {
