@@ -1,0 +1,138 @@
+body {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-sign-up {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+}
+
+.sign-up-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-sign-up h3 {
+  border: none;
+  margin-top: 0;
+  padding-bottom: 40px;
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-size: 49px;
+  line-height: 58px;
+}
+
+.sign-up-form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+.sign-up-form div label {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #373867;
+  padding-bottom: 5px;
+}
+
+.sign-up-form div input {
+  border: 1px solid #373867;
+  border-radius: 4px;
+  padding: 10px 10px;
+}
+
+.sign-up-form div:last-child {
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up-form div:last-child input{
+  width: 100%;
+  border: 1px solid #373867;
+  border-radius: 3px;
+  background: #AACE9B;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #373867;
+  margin-top: 30px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+/* Validations */
+
+.sign-up-form div .is-valid {
+  border-color: #198754;
+  background-color: #19875409;
+}
+
+.sign-up-form div .is-invalid {
+  border: 1px solid #dc3545;
+  background-color: #dc354607;
+}
+
+.validationErrorContainer, .validationSuccessContainer {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.validationErrorContainer {
+  color: #dc3545;
+}
+
+.validationSuccessContainer {
+  color: #198754;
+}
+
+.validation-error-message {
+  align-items: flex-start;
+  margin-top: 5px;
+  color: #dc3545;
+  font-size: 13px;
+}
+
+
+
+@media only screen and (min-width: 768px)  {
+  .container-sign-up {
+    width: 60vw;
+    max-width: 700px;
+  }
+
+  .sign-up-form {
+    justify-content: space-between;
+  }
+
+  .sign-up-form div {
+    width: 45%;
+  }
+
+  .sign-up-form div:last-child {
+    width: 100%;
+    align-items: center;
+  }
+
+  .sign-up-form div:last-child input {
+    width: 50%;
+  }
+} 
