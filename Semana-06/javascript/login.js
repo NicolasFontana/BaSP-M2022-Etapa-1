@@ -1,19 +1,20 @@
 // Nodes
 
-var formEmail = document.getElementById('formEmail')
-var formPassword = document.getElementById('formPassword')
-var validationResult = document.getElementById('validationResult')
-var btnSubmit = document.getElementById('btnSubmit')
-var logInForm = document.getElementById('logInForm')
-var validEmail = document.getElementById('validEmail')
-var validPassword = document.getElementById('validPassword')
+var formEmail = document.getElementById('form-email')
+var formPassword = document.getElementById('form-password')
+var validationResult = document.getElementById('validation-result')
+var btnSubmit = document.getElementById('btn-submit')
+var logInForm = document.getElementById('log-in-form')
+var validEmail = document.getElementById('valid-email')
+var validPassword = document.getElementById('valid-password')
 
 // Validate
+
 function charIsLetter(char) {
   if (typeof char !== 'string') {
     return false
   }
-  return char.toLowerCase() !== char.toUpperCase()
+  return char.toLowerCase() !== char.toUpperCase() //allows only one letter in the string and not a number.
 }
 
 function validatePassword(password) {
@@ -39,8 +40,6 @@ function validateEmail(email) {
   return expReg.test(formEmail.value)
 }
 
-// validate email and password
-
 function validate() {
   validateEmail(formEmail.value)
   validatePassword(formPassword.value)
@@ -49,24 +48,24 @@ function validate() {
 
 // Submit event
 
-logInForm.addEventListener("submit", function(event) {
+logInForm.addEventListener('submit', function(event) {
   event.preventDefault()
 })
 
-btnSubmit.addEventListener('click', function () {
+btnSubmit.addEventListener('click', function() {
   if(validate()) {
     validationResult.innerHTML = `<div class="validationSuccessContainer"><p>Successful login</p></div>`
   } else {
-    validationResult.innerHTML = `<div class="validationErrorContainer"><p>Incorrect username or password.</p></div>`
+    validationResult.innerHTML = `<div class="validationErrorContainer"><p>Incorrect username or password</p></div>`
   }
 })
 
 //Blur and focus event
 
-formEmail.addEventListener('blur', function () {
+formEmail.addEventListener('blur', function() {
   if(validateEmail(formEmail.value)) {
-    formEmail.classList.remove('is-invalid');
-    formEmail.classList.add('is-valid');
+    formEmail.classList.remove('is-invalid')
+    formEmail.classList.add('is-valid')
     validEmail.innerHTML = ""
   } else {
     formEmail.classList.remove('is-valid')
@@ -75,26 +74,26 @@ formEmail.addEventListener('blur', function () {
   }
 })
 
-formEmail.addEventListener('focus', function () {
-  formEmail.classList.remove('is-invalid');
-  formEmail.classList.remove('is-valid');
+formEmail.addEventListener('focus', function() {
+  formEmail.classList.remove('is-invalid')
+  formEmail.classList.remove('is-valid')
   validEmail.innerHTML = ""
 })
 
 formPassword.addEventListener('blur', function() {
   if(validatePassword(formPassword.value)) {
-    formPassword.classList.remove('is-invalid');
-    formPassword.classList.add('is-valid');
+    formPassword.classList.remove('is-invalid')
+    formPassword.classList.add('is-valid')
     validPassword.innerHTML = ""
   } else {
-    formPassword.classList.remove('is-valid');
-    formPassword.classList.add('is-invalid');
+    formPassword.classList.remove('is-valid')
+    formPassword.classList.add('is-invalid')
     validPassword.innerHTML = `<p>Incorrect password</p>`
   }
 })
 
 formPassword.addEventListener('focus', function() {
-  formPassword.classList.remove('is-invalid');
-  formPassword.classList.remove('is-valid');
+  formPassword.classList.remove('is-invalid')
+  formPassword.classList.remove('is-valid')
   validPassword.innerHTML = ""
 })

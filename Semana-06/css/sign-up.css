@@ -12,6 +12,8 @@ main {
   display: flex;
   flex-direction: column;
   width: 60vw;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .sign-up-form {

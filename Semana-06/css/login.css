@@ -44,7 +44,7 @@ main {
   padding-bottom: 10px;
 }
 
-.container-login .emailValue, .container-login .passwordValue{
+.container-login .email-value, .container-login .password-value{
   border: 1px solid #373867;
   border-radius: 4px;
   padding: 10px 10px;
@@ -124,7 +124,7 @@ main {
   color: #198754;
 }
 
-#validEmail p, #validPassword p{
+#valid-email p, #valid-password p{
   margin-top: 10px;
   color: #dc3545;
   font-size: 13px;

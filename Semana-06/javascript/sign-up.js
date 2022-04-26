@@ -24,7 +24,7 @@ var formRepeatPassword = document.getElementById('form-repeat-password')
 var validRepeatPassword = document.getElementById('valid-repeat-password')
 
 var btnSignUp = document.getElementById('btn-sign-up')
-var signUpForm = document.getElementById('signUpForm')
+var signUpForm = document.getElementById('form-sign-up')
 var validationResult = document.getElementById('validation-result-sign-up')
 
 // Utilities
