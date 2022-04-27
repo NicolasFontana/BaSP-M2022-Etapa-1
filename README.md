@@ -19,3 +19,8 @@ Created the CSS style sheet to recreate the landing page design previously done 
 This week I made the CSS style sheet applying flexbox and mediaqueries, to achieve a page with responsive design.
 ## Week-05
 In this week I solved the javascript exercises.
+
+## Week-06
+This week's work consists in the creation of the employee login and sign up using html, css and JavaScript DOM. For this, 2 forms were made with their respective validations.
+
+
