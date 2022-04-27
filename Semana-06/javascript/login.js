@@ -20,7 +20,7 @@ function charIsLetter(char) {
 function validatePassword(password) {
   var hasLetters = false
   var hasNumbers = false
-  for (var i = 0; i < password.length; i++){
+  for (var i = 0; i < password.length; i++) {
     if (charIsLetter(password[i])) {
       hasLetters = true
     } else if (!isNaN(password[i])) {
@@ -48,22 +48,53 @@ function validate() {
 
 // Submit event
 
-logInForm.addEventListener('submit', function(event) {
+logInForm.addEventListener('submit', function (event) {
   event.preventDefault()
 })
 
-btnSubmit.addEventListener('click', function() {
-  if(validate()) {
+// Click event
+
+btnSubmit.addEventListener('click', showResultsLogIn)
+
+// Results log in
+
+function showResultsLogIn() {
+  emailIsValid()
+  passwordIsValid()
+  if (validate()) {
     validationResult.innerHTML = `<div class="validationSuccessContainer"><p>Successful login</p></div>`
   } else {
-    validationResult.innerHTML = `<div class="validationErrorContainer"><p>Incorrect username or password</p></div>`
+    validationResult.innerHTML = `<div class="validationErrorContainer"><p>Incorrect email or password</p></div>`
   }
-})
+  if (validateEmail(formEmail.value)) {
+    var p1 = document.createElement('p')
+    p1.setAttribute("class", "msg-success")
+    p1.innerHTML = `Email: ${formEmail.value}`
+    validationResult.appendChild(p1)
+  } else {
+    var p1 = document.createElement('p')
+    p1.setAttribute("class", "msg-error")
+    p1.innerHTML = "Invalid email. Please check input requirements"
+    validationResult.appendChild(p1)
+  }
+  if (validatePassword(formPassword.value)) {
+    var p2 = document.createElement('p')
+    p2.setAttribute("class", "msg-success")
+    p2.innerHTML = `Password: ${formPassword.value}`
+    validationResult.appendChild(p2)
+  } else {
+    var p2 = document.createElement('p')
+    p2.setAttribute("class", "msg-error")
+    p2.innerHTML = "Invalid password. Please check input requirements"
+    validationResult.appendChild(p2)
+  }
+}
 
-//Blur and focus event
+// Blur and focus event
 
-formEmail.addEventListener('blur', function() {
-  if(validateEmail(formEmail.value)) {
+// Email
+function emailIsValid() {
+  if (validateEmail(formEmail.value)) {
     formEmail.classList.remove('is-invalid')
     formEmail.classList.add('is-valid')
     validEmail.innerHTML = ""
@@ -72,27 +103,33 @@ formEmail.addEventListener('blur', function() {
     formEmail.classList.add('is-invalid')
     validEmail.innerHTML = `<p>Incorrect email</p>`
   }
-})
+}
+formEmail.addEventListener('blur', emailIsValid)
 
-formEmail.addEventListener('focus', function() {
+
+formEmail.addEventListener('focus', function () {
   formEmail.classList.remove('is-invalid')
   formEmail.classList.remove('is-valid')
   validEmail.innerHTML = ""
 })
 
-formPassword.addEventListener('blur', function() {
-  if(validatePassword(formPassword.value)) {
+// Password
+
+function passwordIsValid() {
+  if (validatePassword(formPassword.value)) {
     formPassword.classList.remove('is-invalid')
     formPassword.classList.add('is-valid')
     validPassword.innerHTML = ""
   } else {
     formPassword.classList.remove('is-valid')
     formPassword.classList.add('is-invalid')
-    validPassword.innerHTML = `<p>Incorrect password</p>`
+    validPassword.innerHTML = `<p>Incorrect password. Must have letters and numbers</p>`
   }
-})
+}
 
-formPassword.addEventListener('focus', function() {
+formPassword.addEventListener('blur', passwordIsValid)
+
+formPassword.addEventListener('focus', function () {
   formPassword.classList.remove('is-invalid')
   formPassword.classList.remove('is-valid')
   validPassword.innerHTML = ""

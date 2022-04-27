@@ -253,19 +253,13 @@ signUpForm.addEventListener('submit', function(event) {
 
 // Click event
 
-btnSignUp.addEventListener('click', function () {
-  if (validate()) {
-    validationResult.innerHTML = `<div class="validationSuccessContainer"><p>Successful sign up</p></div>`
-  } else {
-    validationResult.innerHTML = `<div class="validationErrorContainer"><p>Please correct the errors</p></div>`
-  }
-})
+btnSignUp.addEventListener('click', showResultsSignUp)
 
 // Blur and focus event
 
 // Name
 
-formName.addEventListener('blur', function() {
+function nameIsValid(){
   if(validateName(formName.value)) {
     formName.classList.remove('is-invalid')
     formName.classList.add('is-valid')
@@ -275,7 +269,9 @@ formName.addEventListener('blur', function() {
     formName.classList.add('is-invalid')
     validName.innerHTML = "<p>Only letters and must have more than 3 letters</p>"
   }
-})
+}
+
+formName.addEventListener('blur', nameIsValid )
 
 formName.addEventListener('focus', function() {
   formName.classList.remove('is-invalid')
@@ -285,7 +281,7 @@ formName.addEventListener('focus', function() {
 
 // Last name
 
-formLastName.addEventListener('blur', function() {
+function lastNameIsValid() {
   if(validateLastName(formLastName.value)) {
     formLastName.classList.remove('is-invalid')
     formLastName.classList.add('is-valid')
@@ -295,7 +291,9 @@ formLastName.addEventListener('blur', function() {
     formLastName.classList.add('is-invalid')
     validLastName.innerHTML = "<p>Only letters and must have more than 3 letters</p>"
   }
-})
+}
+
+formLastName.addEventListener('blur', lastNameIsValid)
 
 formLastName.addEventListener('focus', function() {
   formLastName.classList.remove('is-invalid')
@@ -305,7 +303,7 @@ formLastName.addEventListener('focus', function() {
 
 // DNI
 
-formDNI.addEventListener('blur', function() {
+function dniIsValid() {
   if(validateDNI(formDNI.value)) {
     formDNI.classList.remove('is-invalid')
     formDNI.classList.add('is-valid')
@@ -315,7 +313,9 @@ formDNI.addEventListener('blur', function() {
     formDNI.classList.add('is-invalid')
     validDNI.innerHTML = "<p>Only numbers and must have more than 7</p>"
   }
-})
+}
+
+formDNI.addEventListener('blur', dniIsValid)
 
 formDNI.addEventListener('focus', function() {
   formDNI.classList.remove('is-invalid')
@@ -325,7 +325,7 @@ formDNI.addEventListener('focus', function() {
 
 // Date
 
-formDate.addEventListener('blur', function() {
+function dateIsValid() {
   if(validateDate(formDate.value)) {
     formDate.classList.remove('is-invalid')
     formDate.classList.add('is-valid')
@@ -335,7 +335,9 @@ formDate.addEventListener('blur', function() {
     formDate.classList.add('is-invalid')
     validDate.innerHTML = "<p>Must be over 18 years old</p>"
   }
-})
+}
+
+formDate.addEventListener('blur', dateIsValid)
 
 formDate.addEventListener('focus', function() {
   formDate.classList.remove('is-invalid')
@@ -345,7 +347,7 @@ formDate.addEventListener('focus', function() {
 
 // Phone
 
-formPhone.addEventListener('blur', function() {
+function phoneIsValid() {
   if(validatePhone(formPhone.value)) {
     formPhone.classList.remove('is-invalid')
     formPhone.classList.add('is-valid')
@@ -355,7 +357,9 @@ formPhone.addEventListener('blur', function() {
     formPhone.classList.add('is-invalid')
     validPhone.innerHTML = "<p>Please enter a valid phone number</p>"
   }
-})
+}
+
+formPhone.addEventListener('blur', phoneIsValid)
 
 formPhone.addEventListener('focus', function() {
   formPhone.classList.remove('is-invalid')
@@ -365,7 +369,7 @@ formPhone.addEventListener('focus', function() {
 
 // Address
 
-formAddress.addEventListener('blur', function() {
+function addressIsValid() {
   if(validateAddress(formAddress.value)) {
     formAddress.classList.remove('is-invalid')
     formAddress.classList.add('is-valid')
@@ -375,7 +379,9 @@ formAddress.addEventListener('blur', function() {
     formAddress.classList.add('is-invalid')
     validAddress.innerHTML = "<p>Enter a valid address</p>"
   }
-})
+}
+
+formAddress.addEventListener('blur', addressIsValid)
 
 formAddress.addEventListener('focus', function() {
   formAddress.classList.remove('is-invalid')
@@ -385,7 +391,7 @@ formAddress.addEventListener('focus', function() {
 
 // City
 
-formCity.addEventListener('blur', function() {
+function cityIsValid() {
   if(validateCity(formCity.value)) {
     formCity.classList.remove('is-invalid')
     formCity.classList.add('is-valid')
@@ -395,7 +401,9 @@ formCity.addEventListener('blur', function() {
     formCity.classList.add('is-invalid')
     validCity.innerHTML = "<p>Must have more than 3 letters</p>"
   }
-})
+}
+
+formCity.addEventListener('blur', cityIsValid)
 
 formCity.addEventListener('focus', function() {
   formCity.classList.remove('is-invalid')
@@ -405,7 +413,7 @@ formCity.addEventListener('focus', function() {
 
 // Zip code
 
-formZipCode.addEventListener('blur', function() {
+function zipCodeIsValid() {
   if(validateZipCode(formZipCode.value)) {
     formZipCode.classList.remove('is-invalid')
     formZipCode.classList.add('is-valid')
@@ -415,7 +423,9 @@ formZipCode.addEventListener('blur', function() {
     formZipCode.classList.add('is-invalid')
     validZipCode.innerHTML = "<p>Must have between 4 and 5 numbers</p>"
   }
-})
+}
+
+formZipCode.addEventListener('blur', zipCodeIsValid)
 
 formZipCode.addEventListener('focus', function() {
   formZipCode.classList.remove('is-invalid')
@@ -425,7 +435,7 @@ formZipCode.addEventListener('focus', function() {
 
 // Email
 
-formEmail.addEventListener('blur', function() {
+function emailIsValid() {
   if(validateEmail(formEmail.value)) {
     formEmail.classList.remove('is-invalid')
     formEmail.classList.add('is-valid')
@@ -435,7 +445,9 @@ formEmail.addEventListener('blur', function() {
     formEmail.classList.add('is-invalid')
     validEmail.innerHTML = "<p>Enter a valid email</p>"
   }
-})
+}
+
+formEmail.addEventListener('blur', emailIsValid)
 
 formEmail.addEventListener('focus', function() {
   formEmail.classList.remove('is-invalid')
@@ -445,7 +457,7 @@ formEmail.addEventListener('focus', function() {
 
 // Password
 
-formPassword.addEventListener('blur', function() {
+function passwordIsValid() {
   if(validatePassword(formPassword.value)) {
     formPassword.classList.remove('is-invalid')
     formPassword.classList.add('is-valid')
@@ -455,7 +467,9 @@ formPassword.addEventListener('blur', function() {
     formPassword.classList.add('is-invalid')
     validPassword.innerHTML = "<p>At least 8 characters, made up of letters and numbers</p>"
   }
-})
+}
+
+formPassword.addEventListener('blur', passwordIsValid)
 
 formPassword.addEventListener('focus', function() {
   formPassword.classList.remove('is-invalid')
@@ -465,7 +479,7 @@ formPassword.addEventListener('focus', function() {
 
 // Repeat password
 
-formRepeatPassword.addEventListener('blur', function() {
+function repeatPasswordIsValid() {
   if (validatePassword(formPassword.value)) {
     if(validateRepeatPassword(formRepeatPassword.value, formPassword.value)) {
       formRepeatPassword.classList.remove('is-invalid')
@@ -481,10 +495,161 @@ formRepeatPassword.addEventListener('blur', function() {
     formRepeatPassword.classList.add('is-invalid')
     validRepeatPassword.innerHTML = "<p>Must match the password</p>"
   }
-})
+}
+
+formRepeatPassword.addEventListener('blur', repeatPasswordIsValid)
 
 formRepeatPassword.addEventListener('focus', function() {
   formRepeatPassword.classList.remove('is-invalid')
   formRepeatPassword.classList.remove('is-valid')
   validRepeatPassword.innerHTML = ""
 })
+
+// Results sign up
+
+function showResultsSignUp() {
+  nameIsValid()
+  lastNameIsValid()
+  dniIsValid()
+  dateIsValid()
+  phoneIsValid()
+  addressIsValid()
+  cityIsValid()
+  zipCodeIsValid()
+  emailIsValid()
+  passwordIsValid()
+  repeatPasswordIsValid()
+  if (validate()) {
+    validationResult.innerHTML = `<div class="validationSuccessContainer"><p>Successful sign up</p></div>`
+  } else {
+    validationResult.innerHTML = `<div class="validationErrorContainer"><p>Please correct the errors</p></div>`
+  }
+  if (validateName(formName.value)) {
+    var p1 = document.createElement('p')
+    p1.setAttribute("class", "msg-success")
+    p1.innerHTML = `Name: ${formName.value}`
+    validationResult.appendChild(p1)
+  } else {
+    var p1 = document.createElement('p')
+    p1.setAttribute("class", "msg-error")
+    p1.innerHTML = "Invalid name. Only letters and must have more than 3 letters"
+    validationResult.appendChild(p1)
+  }
+  if (validateLastName(formLastName.value)) {
+    var p2 = document.createElement('p')
+    p2.setAttribute("class", "msg-success")
+    p2.innerHTML = `Last name: ${formLastName.value}`
+    validationResult.appendChild(p2)
+  } else {
+    var p2 = document.createElement('p')
+    p2.setAttribute("class", "msg-error")
+    p2.innerHTML = "Invalid last name. Only letters and must have more than 3 letters"
+    validationResult.appendChild(p2)
+  }
+  if (validateDNI(formDNI.value)) {
+    var p3 = document.createElement('p')
+    p3.setAttribute("class", "msg-success")
+    p3.innerHTML = `DNI: ${formDNI.value}`
+    validationResult.appendChild(p3)
+  } else {
+    var p3 = document.createElement('p')
+    p3.setAttribute("class", "msg-error")
+    p3.innerHTML = "Invalid DNI. Only numbers and must have more than 7"
+    validationResult.appendChild(p3)
+  }
+  if (validateDate(formDate.value)) {
+    var p4 = document.createElement('p')
+    p4.setAttribute("class", "msg-success")
+    p4.innerHTML = `Valid birthday`
+    validationResult.appendChild(p4)
+  } else {
+    var p4 = document.createElement('p')
+    p4.setAttribute("class", "msg-error")
+    p4.innerHTML = "Invalid birthday. Must be over 18 years old"
+    validationResult.appendChild(p4)
+  }
+  if (validatePhone(formPhone.value)) {
+    var p5 = document.createElement('p')
+    p5.setAttribute("class", "msg-success")
+    p5.innerHTML = `Telephone number: ${formPhone.value}`
+    validationResult.appendChild(p5)
+  } else {
+    var p5 = document.createElement('p')
+    p5.setAttribute("class", "msg-error")
+    p5.innerHTML = "Invalid telephone number. Please enter a valid phone number"
+    validationResult.appendChild(p5)
+  }
+  if (validateAddress(formAddress.value)) {
+    var p6 = document.createElement('p')
+    p6.setAttribute("class", "msg-success")
+    p6.innerHTML = `Address: ${formAddress.value}`
+    validationResult.appendChild(p6)
+  } else {
+    var p6 = document.createElement('p')
+    p6.setAttribute("class", "msg-error")
+    p6.innerHTML = "Invalid address. Enter a valid address"
+    validationResult.appendChild(p6)
+  }
+  if (validateCity(formCity.value)) {
+    var p7 = document.createElement('p')
+    p7.setAttribute("class", "msg-success")
+    p7.innerHTML = `City: ${formCity.value}`
+    validationResult.appendChild(p7)
+  } else {
+    var p7 = document.createElement('p')
+    p7.setAttribute("class", "msg-error")
+    p7.innerHTML = "Invalid city. Enter a valid city"
+    validationResult.appendChild(p7)
+  }
+  if (validateZipCode(formZipCode.value)) {
+    var p8 = document.createElement('p')
+    p8.setAttribute("class", "msg-success")
+    p8.innerHTML = `Zip code: ${formZipCode.value}`
+    validationResult.appendChild(p8)
+  } else {
+    var p8 = document.createElement('p')
+    p8.setAttribute("class", "msg-error")
+    p8.innerHTML = "Invalid zip code. Must have between 4 and 5 numbers"
+    validationResult.appendChild(p8)
+  }
+  if (validateEmail(formEmail.value)) {
+    var p9 = document.createElement('p')
+    p9.setAttribute("class", "msg-success")
+    p9.innerHTML = `Email: ${formEmail.value}`
+    validationResult.appendChild(p9)
+  } else {
+    var p9 = document.createElement('p')
+    p9.setAttribute("class", "msg-error")
+    p9.innerHTML = "Invalid email. Enter a valid city email"
+    validationResult.appendChild(p9)
+  }
+  if (validatePassword(formPassword.value)) {
+    var p10 = document.createElement('p')
+    p10.setAttribute("class", "msg-success")
+    p10.innerHTML = `Password: ${formPassword.value}`
+    validationResult.appendChild(p10)
+  } else {
+    var p10 = document.createElement('p')
+    p10.setAttribute("class", "msg-error")
+    p10.innerHTML = "Invalid password. At least 8 characters, made up of letters and numbers"
+    validationResult.appendChild(p10)
+  }
+  if (validatePassword(formPassword.value)) {
+    if (validateRepeatPassword(formRepeatPassword.value, formPassword.value)) {
+      var p11 = document.createElement('p')
+      p11.setAttribute("class", "msg-success")
+      p11.innerHTML = `Password match`
+      validationResult.appendChild(p11)
+    } else {
+      var p11 = document.createElement('p')
+      p11.setAttribute("class", "msg-error")
+      p11.innerHTML = "Password don't match. Try again"
+      validationResult.appendChild(p11)
+    }
+  } else {
+    var p11 = document.createElement('p')
+    p11.setAttribute("class", "msg-error")
+    p11.innerHTML = "Password don't match. Try again"
+    validationResult.appendChild(p11)
+  }
+}
