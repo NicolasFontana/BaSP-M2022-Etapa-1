@@ -1,0 +1,154 @@
+body {
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main */
+
+.container-login {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+}
+
+.container-login h3 {
+  border: none;
+  margin-top: 0;
+  padding-bottom: 88px;
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-size: 49px;
+  line-height: 58px;
+}
+
+.container-login form {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-login form label {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #373867;
+}
+
+.container-login form .email, .container-login form .txt-pass {
+  padding-bottom: 10px;
+}
+
+.container-login .email-value, .container-login .password-value{
+  border: 1px solid #373867;
+  border-radius: 4px;
+  padding: 10px 10px;
+}
+
+.container-login form input[type="email"]::placeholder, .container-login form input[type="password"]::placeholder{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #373867;
+}
+
+.container-login form .txt-pass {
+  padding-top: 50px;
+}
+
+.container-remember-forgot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.container-remember-forgot div {
+  display: flex;
+  align-items: center;
+}
+
+.container-remember-forgot div input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0 10px 0 0;
+}
+
+.container-login form input[type="submit"] {
+  border: 1px solid #373867;
+  border-radius: 3px;
+  background: #AACE9B;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #373867;
+  margin-top: 115px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+/* Validation */
+
+.container-login .is-valid {
+  border-color: #198754;
+  background-color: #19875409;
+}
+
+.container-login .is-invalid {
+  border: 1px solid #dc3545;
+  background-color: #dc354607;
+}
+
+.validationErrorContainer, .validationSuccessContainer {
+  margin-top: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.validationErrorContainer {
+  color: #dc3545;
+}
+
+.validationSuccessContainer {
+  color: #198754;
+}
+
+#valid-email p, #valid-password p{
+  margin-top: 10px;
+  color: #dc3545;
+  font-size: 15px;
+}
+
+.msg-error {
+  color: #dc3545;
+  font-size: 14px;
+  text-align: center;
+}
+
+.msg-success {
+  color: #198754;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* MediaQueries */
+
+@media only screen and (min-width: 768px)  {
+  .container-login {
+    width: 30vw;
+    max-width: 400px;
+  }
+}
+
+
