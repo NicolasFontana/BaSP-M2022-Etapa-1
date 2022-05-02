@@ -41,8 +41,6 @@ function validateEmail(email) {
 }
 
 function validate() {
-  validateEmail(formEmail.value)
-  validatePassword(formPassword.value)
   return validateEmail(formEmail.value) && validatePassword(formPassword.value)
 }
 

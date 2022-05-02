@@ -46,7 +46,7 @@ function containNumbers(str) {
   return false
 }
 
-function containSpecialChar (specialChar) {
+function containSpecialChar(specialChar) {
   for (var i = 0; i < specialChar.length; i++) {
     if (!charIsLetter(specialChar[i]) && isNaN(specialChar[i])) {
       return true
@@ -59,7 +59,7 @@ function containSpecialChar (specialChar) {
 function validateName(name) {
   if (name.length < 3) {
     return false
-  }else if (containNumbers(name)) {
+  } else if (containNumbers(name)) {
     return false
   } else if (containSpecialChar(name)) {
     return false
@@ -73,7 +73,7 @@ function validateName(name) {
 function validateLastName(name) {
   if (name.length < 3) {
     return false
-  }else if (containNumbers(name)) {
+  } else if (containNumbers(name)) {
     return false
   } else if (containSpecialChar(name)) {
     return false
@@ -101,14 +101,14 @@ function validateAge(birthDate) {
   var birtday = new Date(birthDate);
   var age = today.getFullYear() - birtday.getFullYear();
   var month = today.getMonth() - birtday.getMonth();
-  if (month < 0 || (month === 0 && today.getDate() < birtday.getDate()+1)) {
-      age--;
+  if (month < 0 || (month === 0 && today.getDate() < birtday.getDate() + 1)) {
+    age--;
   }
   return age
 }
 
 function validateDate(birthDate) {
-  if (validateAge(birthDate) < 18){
+  if (validateAge(birthDate) < 18) {
     return false
   } else if (birthDate === '') {
     return false
@@ -132,7 +132,7 @@ function validatePhone(num) {
 // Validate address
 
 function testAddress(address) {
-  var numbers = ['1','2','3','4','5','6','7','8','9','0']
+  var numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
   var nums = 0
   var char = 0
   var whiteSpace = 0
@@ -198,7 +198,7 @@ function validatePassword(password) {
   var hasLetters = false
   var hasNumbers = false
   if (password.length >= 8) {
-    for (var i = 0; i < password.length; i++){
+    for (var i = 0; i < password.length; i++) {
       if (charIsLetter(password[i])) {
         hasLetters = true
       } else if (!isNaN(password[i])) {
@@ -229,25 +229,13 @@ function validateRepeatPassword(password1, repeatPassword) {
 // Global validate
 
 function validate() {
-  validateName(formName.value)
-  validateLastName(formLastName.value)
-  validateDNI(formDNI.value)
-  validatePhone(formPhone.value)
-  validateDate(formDate.value)
-  validateAddress(formAddress.value)
-  validateCity(formCity.value)
-  validateZipCode(formZipCode.value)
-  validateEmail(formEmail.value)
-  validatePassword(formPassword.value)
-  validateRepeatPassword(formRepeatPassword.value, formPassword.value)
-
   return validateName(formName.value) && validateLastName(formLastName.value) && validateDNI(formDNI.value) && validateDate(formDate.value) && validatePhone(formPhone.value) && validateAddress(formAddress.value) && validateCity(formCity.value) && validateZipCode(formZipCode.value) && validateEmail(formEmail.value) && validatePassword(formPassword.value) && validateRepeatPassword(formRepeatPassword.value, formPassword.value)
 }
 
 
 // Submit event
 
-signUpForm.addEventListener('submit', function(event) {
+signUpForm.addEventListener('submit', function (event) {
   event.preventDefault()
 })
 
@@ -281,8 +269,8 @@ formZipCode.addEventListener('keydown', function (e) {
 
 // Name
 
-function nameIsValid(){
-  if(validateName(formName.value)) {
+function nameIsValid() {
+  if (validateName(formName.value)) {
     formName.classList.remove('is-invalid')
     formName.classList.add('is-valid')
     validName.innerHTML = ""
@@ -293,9 +281,9 @@ function nameIsValid(){
   }
 }
 
-formName.addEventListener('blur', nameIsValid )
+formName.addEventListener('blur', nameIsValid)
 
-formName.addEventListener('focus', function() {
+formName.addEventListener('focus', function () {
   formName.classList.remove('is-invalid')
   formName.classList.remove('is-valid')
   validName.innerHTML = ""
@@ -304,7 +292,7 @@ formName.addEventListener('focus', function() {
 // Last name
 
 function lastNameIsValid() {
-  if(validateLastName(formLastName.value)) {
+  if (validateLastName(formLastName.value)) {
     formLastName.classList.remove('is-invalid')
     formLastName.classList.add('is-valid')
     validLastName.innerHTML = ""
@@ -317,7 +305,7 @@ function lastNameIsValid() {
 
 formLastName.addEventListener('blur', lastNameIsValid)
 
-formLastName.addEventListener('focus', function() {
+formLastName.addEventListener('focus', function () {
   formLastName.classList.remove('is-invalid')
   formLastName.classList.remove('is-valid')
   validLastName.innerHTML = ""
@@ -326,7 +314,7 @@ formLastName.addEventListener('focus', function() {
 // DNI
 
 function dniIsValid() {
-  if(validateDNI(formDNI.value)) {
+  if (validateDNI(formDNI.value)) {
     formDNI.classList.remove('is-invalid')
     formDNI.classList.add('is-valid')
     validDNI.innerHTML = ""
@@ -339,7 +327,7 @@ function dniIsValid() {
 
 formDNI.addEventListener('blur', dniIsValid)
 
-formDNI.addEventListener('focus', function() {
+formDNI.addEventListener('focus', function () {
   formDNI.classList.remove('is-invalid')
   formDNI.classList.remove('is-valid')
   validDNI.innerHTML = ""
@@ -348,7 +336,7 @@ formDNI.addEventListener('focus', function() {
 // Date
 
 function dateIsValid() {
-  if(validateDate(formDate.value)) {
+  if (validateDate(formDate.value)) {
     formDate.classList.remove('is-invalid')
     formDate.classList.add('is-valid')
     validDate.innerHTML = ""
@@ -361,7 +349,7 @@ function dateIsValid() {
 
 formDate.addEventListener('blur', dateIsValid)
 
-formDate.addEventListener('focus', function() {
+formDate.addEventListener('focus', function () {
   formDate.classList.remove('is-invalid')
   formDate.classList.remove('is-valid')
   validDate.innerHTML = ""
@@ -370,7 +358,7 @@ formDate.addEventListener('focus', function() {
 // Phone
 
 function phoneIsValid() {
-  if(validatePhone(formPhone.value)) {
+  if (validatePhone(formPhone.value)) {
     formPhone.classList.remove('is-invalid')
     formPhone.classList.add('is-valid')
     validPhone.innerHTML = ""
@@ -383,7 +371,7 @@ function phoneIsValid() {
 
 formPhone.addEventListener('blur', phoneIsValid)
 
-formPhone.addEventListener('focus', function() {
+formPhone.addEventListener('focus', function () {
   formPhone.classList.remove('is-invalid')
   formPhone.classList.remove('is-valid')
   validPhone.innerHTML = ""
@@ -392,7 +380,7 @@ formPhone.addEventListener('focus', function() {
 // Address
 
 function addressIsValid() {
-  if(validateAddress(formAddress.value)) {
+  if (validateAddress(formAddress.value)) {
     formAddress.classList.remove('is-invalid')
     formAddress.classList.add('is-valid')
     validAddress.innerHTML = ""
@@ -405,7 +393,7 @@ function addressIsValid() {
 
 formAddress.addEventListener('blur', addressIsValid)
 
-formAddress.addEventListener('focus', function() {
+formAddress.addEventListener('focus', function () {
   formAddress.classList.remove('is-invalid')
   formAddress.classList.remove('is-valid')
   validAddress.innerHTML = ""
@@ -414,7 +402,7 @@ formAddress.addEventListener('focus', function() {
 // City
 
 function cityIsValid() {
-  if(validateCity(formCity.value)) {
+  if (validateCity(formCity.value)) {
     formCity.classList.remove('is-invalid')
     formCity.classList.add('is-valid')
     validCity.innerHTML = ""
@@ -427,7 +415,7 @@ function cityIsValid() {
 
 formCity.addEventListener('blur', cityIsValid)
 
-formCity.addEventListener('focus', function() {
+formCity.addEventListener('focus', function () {
   formCity.classList.remove('is-invalid')
   formCity.classList.remove('is-valid')
   validCity.innerHTML = ""
@@ -436,7 +424,7 @@ formCity.addEventListener('focus', function() {
 // Zip code
 
 function zipCodeIsValid() {
-  if(validateZipCode(formZipCode.value)) {
+  if (validateZipCode(formZipCode.value)) {
     formZipCode.classList.remove('is-invalid')
     formZipCode.classList.add('is-valid')
     validZipCode.innerHTML = ""
@@ -449,7 +437,7 @@ function zipCodeIsValid() {
 
 formZipCode.addEventListener('blur', zipCodeIsValid)
 
-formZipCode.addEventListener('focus', function() {
+formZipCode.addEventListener('focus', function () {
   formZipCode.classList.remove('is-invalid')
   formZipCode.classList.remove('is-valid')
   validZipCode.innerHTML = ""
@@ -458,7 +446,7 @@ formZipCode.addEventListener('focus', function() {
 // Email
 
 function emailIsValid() {
-  if(validateEmail(formEmail.value)) {
+  if (validateEmail(formEmail.value)) {
     formEmail.classList.remove('is-invalid')
     formEmail.classList.add('is-valid')
     validEmail.innerHTML = ""
@@ -471,7 +459,7 @@ function emailIsValid() {
 
 formEmail.addEventListener('blur', emailIsValid)
 
-formEmail.addEventListener('focus', function() {
+formEmail.addEventListener('focus', function () {
   formEmail.classList.remove('is-invalid')
   formEmail.classList.remove('is-valid')
   validEmail.innerHTML = ""
@@ -480,7 +468,7 @@ formEmail.addEventListener('focus', function() {
 // Password
 
 function passwordIsValid() {
-  if(validatePassword(formPassword.value)) {
+  if (validatePassword(formPassword.value)) {
     formPassword.classList.remove('is-invalid')
     formPassword.classList.add('is-valid')
     validPassword.innerHTML = ""
@@ -493,7 +481,7 @@ function passwordIsValid() {
 
 formPassword.addEventListener('blur', passwordIsValid)
 
-formPassword.addEventListener('focus', function() {
+formPassword.addEventListener('focus', function () {
   formPassword.classList.remove('is-invalid')
   formPassword.classList.remove('is-valid')
   validPassword.innerHTML = ""
@@ -503,7 +491,7 @@ formPassword.addEventListener('focus', function() {
 
 function repeatPasswordIsValid() {
   if (validatePassword(formPassword.value)) {
-    if(validateRepeatPassword(formRepeatPassword.value, formPassword.value)) {
+    if (validateRepeatPassword(formRepeatPassword.value, formPassword.value)) {
       formRepeatPassword.classList.remove('is-invalid')
       formRepeatPassword.classList.add('is-valid')
       validRepeatPassword.innerHTML = ""
@@ -521,7 +509,7 @@ function repeatPasswordIsValid() {
 
 formRepeatPassword.addEventListener('blur', repeatPasswordIsValid)
 
-formRepeatPassword.addEventListener('focus', function() {
+formRepeatPassword.addEventListener('focus', function () {
   formRepeatPassword.classList.remove('is-invalid')
   formRepeatPassword.classList.remove('is-valid')
   validRepeatPassword.innerHTML = ""
