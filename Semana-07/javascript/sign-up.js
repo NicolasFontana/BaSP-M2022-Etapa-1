@@ -27,6 +27,8 @@ var btnSignUp = document.getElementById('btn-sign-up')
 var signUpForm = document.getElementById('form-sign-up')
 var validationResult = document.getElementById('validation-result-sign-up')
 
+var signUpURL = 'https://basp-m2022-api-rest-server.herokuapp.com/signup'
+
 // Utilities
 
 function charIsLetter(char) {
@@ -515,9 +517,85 @@ formRepeatPassword.addEventListener('focus', function () {
   validRepeatPassword.innerHTML = ""
 })
 
-// Results sign up
+// Fetch 
 
-function showResultsSignUp() {
+function fetchLogin(formName, formLastName, formDNI, formDate, formPhone, formAddress, formCity, formZipCode, formEmail, formPassword, signUpURL) {
+  var date = formDate.value
+  var year = date.slice(0, 4)
+  var month = date.slice(5, 7)
+  var day = date.slice(8, 10)
+  var dateFormated = `${month}/${day}/${year}`
+
+
+  fetch(`${signUpURL}?name=${formName.value}&lastName=${formLastName.value}&dni=${formDNI.value}&dob=${dateFormated}&phone=${formPhone.value}&address=${formAddress.value}&city=${formCity.value}&zip=${formZipCode.value}&email=${formEmail.value}&password=${formPassword.value}`)
+
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (jsonResponse) {
+      console.log(jsonResponse)
+    })
+    .catch(function (error) {
+      console.log('Error', error);
+    });
+}
+
+// Save in LocalStorage
+
+function saveInLocalStorage(formName, formLastName, formDNI, formDate, formPhone, formAddress, formCity, formZipCode, formEmail, formPassword, formRepeatPassword) {
+  localStorage.setItem('name', formName.value)
+  localStorage.setItem('lastName', formLastName.value)
+  localStorage.setItem('dni', formDNI.value)
+  localStorage.setItem('date', formDate.value)
+  localStorage.setItem('phone', formPhone.value)
+  localStorage.setItem('address', formAddress.value)
+  localStorage.setItem('city', formCity.value)
+  localStorage.setItem('zip', formZipCode.value)
+  localStorage.setItem('email', formEmail.value)
+  localStorage.setItem('password', formPassword.value)
+  localStorage.setItem('repeatPassword', formRepeatPassword.value)
+}
+
+// Read localStorage
+
+function readLocalStorage(formName, formLastName, formDNI, formDate, formPhone, formAddress, formCity, formZipCode, formEmail, formPassword, formRepeatPassword) {
+  formName.value = localStorage.getItem('name')
+  formLastName.value = localStorage.getItem('lastName')
+  formDNI.value = localStorage.getItem('dni')
+  formDate.value = localStorage.getItem('date')
+  formPhone.value = localStorage.getItem('phone')
+  formAddress.value = localStorage.getItem('address')
+  formCity.value = localStorage.getItem('city')
+  formZipCode.value = localStorage.getItem('zip')
+  formEmail.value = localStorage.getItem('email')
+  formPassword.value = localStorage.getItem('password')
+  formRepeatPassword.value = localStorage.getItem('repeatPassword')
+}
+
+// Validate localStorage
+
+function validateLocalStorage () {
+  if (localStorage.getItem('name') && localStorage.getItem('lastName') && localStorage.getItem('dni') && localStorage.getItem('date') && localStorage.getItem('phone') && localStorage.getItem('address') && localStorage.getItem('city') && localStorage.getItem('zip') && localStorage.getItem('email') && localStorage.getItem('password') && localStorage.getItem('repeatPassword')) {
+    return true
+  } else {
+    return false
+  }
+}
+
+// Write localStorage
+
+function writeLocalStorage() {
+  if (validateLocalStorage()) {
+    readLocalStorage(formName, formLastName, formDNI, formDate, formPhone, formAddress, formCity, formZipCode, formEmail, formPassword, formRepeatPassword)
+    validateInputs()
+  }
+}
+
+writeLocalStorage()
+
+// Validate inputs
+
+function validateInputs() {
   nameIsValid()
   lastNameIsValid()
   dniIsValid()
@@ -529,8 +607,17 @@ function showResultsSignUp() {
   emailIsValid()
   passwordIsValid()
   repeatPasswordIsValid()
+}
+
+// Results sign up
+
+function showResultsSignUp() {
+  validateInputs()
+
   if (validate()) {
     validationResult.innerHTML = `<div class="validationSuccessContainer"><p>Successful sign up</p></div>`
+    fetchLogin(formName, formLastName, formDNI, formDate, formPhone, formAddress, formCity, formZipCode, formEmail, formPassword, signUpURL)
+    saveInLocalStorage(formName, formLastName, formDNI, formDate, formPhone, formAddress, formCity, formZipCode, formEmail, formPassword, formRepeatPassword)
   } else {
     validationResult.innerHTML = `<div class="validationErrorContainer"><p>Please correct the errors</p></div>`
   }
