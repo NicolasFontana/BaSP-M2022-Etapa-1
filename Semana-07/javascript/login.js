@@ -7,6 +7,7 @@ var btnSubmit = document.getElementById('btn-submit')
 var logInForm = document.getElementById('log-in-form')
 var validEmail = document.getElementById('valid-email')
 var validPassword = document.getElementById('valid-password')
+var loginURL = 'https://basp-m2022-api-rest-server.herokuapp.com/login'
 
 // Validate
 
@@ -54,13 +55,36 @@ logInForm.addEventListener('submit', function (event) {
 
 btnSubmit.addEventListener('click', showResultsLogIn)
 
+// Fetch
+
+function fetchLogin(formEmail, formPassword, loginURL) {
+
+  fetch(loginURL + '?email=' + formEmail.value + '&password=' + formPassword.value)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (jsonResponse) {
+      console.log(jsonResponse)
+      if (jsonResponse.success) {
+        alert('Successful request.' + '\nMessage: ' + jsonResponse.msg)
+      } else {
+        alert('Error.' + '\nMessage: ' + jsonResponse.msg)
+      }
+    })
+    .catch(function (error) {
+      console.log('Error', error);
+    });
+}
+
 // Results log in
 
 function showResultsLogIn() {
   emailIsValid()
   passwordIsValid()
+
   if (validate()) {
     validationResult.innerHTML = `<div class="validationSuccessContainer"><p>Successful login</p></div>`
+    fetchLogin(formEmail, formPassword, loginURL)
   } else {
     validationResult.innerHTML = `<div class="validationErrorContainer"><p>Incorrect email or password</p></div>`
   }
