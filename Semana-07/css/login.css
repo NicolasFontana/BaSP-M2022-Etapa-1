@@ -142,12 +142,83 @@ main {
   text-align: center;
 }
 
+/* Modal */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 70%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+  font-size: 28px;
+  font-weight: bold;
+
+}
+
+.close:hover,
+.close:focus {
+  color: #aaa;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #232F3E;
+  color: #FFF;
+}
+
+.modal-title p {
+  font-size: 30px;
+}
+
+
+.modal-information {
+  padding: 20px;
+  background: #FFF;
+  font-size: 20px;
+}
+
+.modal-information p {
+  line-height: 40px;
+}
+
+.modal-loading {
+  text-align: center;
+}
+
+
 /* MediaQueries */
 
 @media only screen and (min-width: 768px)  {
   .container-login {
     width: 30vw;
     max-width: 400px;
+  }
+
+  .modal-content {
+    width: 50%;
   }
 }
 

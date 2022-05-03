@@ -1,99 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trackgenix S.A. - Login</title>
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/aside.css">
-    <link rel="stylesheet" href="../css/login.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Raleway&family=Roboto&display=swap"
-      rel="stylesheet">
-  </head>
-  <body>
-    <aside>
-      <div class="bg-search"></div>
-      <nav>
-        <div class="search">
-          <img src="../img/search-icon.png" alt="Search icon">
-          <input type="search" placeholder="Search">
-        </div>
-        <div class="menu">
-          <h2 class="text-menu">Menu</h2>
-          <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./sign-up.html">Sign Up</a></li>
-            <li class="menu-active"><a href="./login.html">Log In</a></li>
-          </ul>
-        </div>
-        <div class="contact-text">
-          <h2 class="get-in-touch">Get in touch</h2>
-          <p class="text-get-in-touch">Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac
-            varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem
-            feugiat
-            tempus aliquam.</p>
-        </div>
-        <div class="contact">
-          <ul>
-            <li><a href="#"><img class="image-icon" src="../img/email.png" alt="Email icon"><span
-                  class="text-contact-email">information@trackgenix.tld</span></a></li>
-            <li><a href="#"><img class="image-icon" src="../img/home.png" alt="Home icon"><span
-                  class="text-contact-home">1234 Somewhere Road #8254 Nashville. TN 0000-0000</span></a></li>
-            <li><a href="#"><img class="image-icon" src="../img/phone.png" alt="Phone icon"><span
-                  class="text-contact-phone">(000) 0000-0000</span></a></li>
-          </ul>
-        </div>
-      </nav>
-    </aside>
-    <header>
-      <img class="burguer-icon" src="../img/burguer.png" alt="Burger menu icon">
-      <h1>Trackgenix SA</h1>
-    </header>
-    <main>
-      <div class="container-login">
-        <h3>Log In</h3>
-        <form id="log-in-form">
-          <label class="email" >Email</label>
-          <input id="form-email" class="email-value" type="text" placeholder="Email address">
-          <div id="valid-email"></div>
-          <label class="txt-pass">Password</label>
-          <input id="form-password" class="password-value" type="password" placeholder="Password">
-          <div id="valid-password"></div>
-          <div class="container-remember-forgot">
-            <div>
-              <input type="checkbox">
-              <label>Remember me</label>
-            </div>
-            <label><a href="./login.html">Forgot password?</a></label>
-          </div>
-          <input id="btn-submit" type="submit" value="Log In">
-        </form>
-        <div id="validation-result">
-        </div>
-      </div>  
-    </main>
-    <footer>
-      <div class="container-footer">
-        <p class="location">Rosario, Argentina</p>
-        <div>
-          <a href="#"><img src="../img/linkedin.svg" alt="Linkedin icon"></a>
-          <a href="#"><img src="../img/instagram.svg" alt="Instagram icon"></a>
-          <a href="#"><img src="../img/facebook.svg" alt="Facebook icon"></a>
-          <a href="#"><img src="../img/twitter.svg" alt="Twitter icon"></a>
-        </div>
-        <p class="rights-reserved">Copyright © 2022 Radium Rocket. All rights reserved.</p>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trackgenix S.A. - Login</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/aside.css">
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Raleway&family=Roboto&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <aside>
+    <div class="bg-search"></div>
+    <nav>
+      <div class="search">
+        <img src="../img/search-icon.png" alt="Search icon">
+        <input type="search" placeholder="Search">
       </div>
-    </footer>
-    <!-- Script JS -->
-    <script src="../javascript/login.js"></script>
-  </body>
+      <div class="menu">
+        <h2 class="text-menu">Menu</h2>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./sign-up.html">Sign Up</a></li>
+          <li class="menu-active"><a href="./login.html">Log In</a></li>
+        </ul>
+      </div>
+      <div class="contact-text">
+        <h2 class="get-in-touch">Get in touch</h2>
+        <p class="text-get-in-touch">Sed varius enim lorem ullamcorper dolore aliquam aenean ornare velit lacus, ac
+          varius enim lorem ullamcorper dolore. Proin sed aliquam facilisis ante interdum. Sed nulla amet lorem
+          feugiat
+          tempus aliquam.</p>
+      </div>
+      <div class="contact">
+        <ul>
+          <li><a href="#"><img class="image-icon" src="../img/email.png" alt="Email icon"><span
+                class="text-contact-email">information@trackgenix.tld</span></a></li>
+          <li><a href="#"><img class="image-icon" src="../img/home.png" alt="Home icon"><span
+                class="text-contact-home">1234 Somewhere Road #8254 Nashville. TN 0000-0000</span></a></li>
+          <li><a href="#"><img class="image-icon" src="../img/phone.png" alt="Phone icon"><span
+                class="text-contact-phone">(000) 0000-0000</span></a></li>
+        </ul>
+      </div>
+    </nav>
+  </aside>
+  <header>
+    <img class="burguer-icon" src="../img/burguer.png" alt="Burger menu icon">
+    <h1>Trackgenix SA</h1>
+  </header>
+  <main>
+    <div class="container-login">
+      <h3>Log In</h3>
+      <form id="log-in-form">
+        <label class="email">Email</label>
+        <input id="form-email" class="email-value" type="text" placeholder="Email address">
+        <div id="valid-email"></div>
+        <label class="txt-pass">Password</label>
+        <input id="form-password" class="password-value" type="password" placeholder="Password">
+        <div id="valid-password"></div>
+        <div class="container-remember-forgot">
+          <div>
+            <input type="checkbox">
+            <label>Remember me</label>
+          </div>
+          <label><a href="./login.html">Forgot password?</a></label>
+        </div>
+        <input id="btn-submit" type="submit" value="Log In">
+      </form>
+      <div id="validation-result">
+      </div>
+    </div>
+    <!-- The Modal -->
+    <div id="my-modal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-title">
+          <p>Log in results</p>
+          <span class="close">&times;</span>
+        </div>
+        <div id="modal-info" class="modal-information">
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container-footer">
+      <p class="location">Rosario, Argentina</p>
+      <div>
+        <a href="#"><img src="../img/linkedin.svg" alt="Linkedin icon"></a>
+        <a href="#"><img src="../img/instagram.svg" alt="Instagram icon"></a>
+        <a href="#"><img src="../img/facebook.svg" alt="Facebook icon"></a>
+        <a href="#"><img src="../img/twitter.svg" alt="Twitter icon"></a>
+      </div>
+      <p class="rights-reserved">Copyright © 2022 Radium Rocket. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- Script JS -->
+  <script src="../javascript/login.js"></script>
+</body>
+
 </html>

@@ -66,9 +66,12 @@ function fetchLogin(formEmail, formPassword, loginURL) {
     .then(function (jsonResponse) {
       console.log(jsonResponse)
       if (jsonResponse.success) {
-        alert('Successful request.' + '\nMessage: ' + jsonResponse.msg)
+        modalInfo.innerHTML = (`<p>${jsonResponse.msg}</p>
+                                <p>Email: ${formEmail.value}</p>
+                                <p>Password: ${formPassword.value}</p>`)
       } else {
-        alert('Error.' + '\nMessage: ' + jsonResponse.msg)
+        modalInfo.innerHTML = (`<p>Error</p>
+                                <p>Message: ${jsonResponse.msg}</p>`)
       }
     })
     .catch(function (error) {
@@ -156,3 +159,28 @@ formPassword.addEventListener('focus', function () {
   formPassword.classList.remove('is-valid')
   validPassword.innerHTML = ""
 })
+
+// Modal
+
+var modal = document.getElementById('my-modal');
+var modalInfo = document.getElementById('modal-info')
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+btnSubmit.onclick = function(e) {
+  if (!validate()) {
+    e.preventDefault
+  } else {
+    modal.style.display = "block";
+    modalInfo.innerHTML = (`<p class="modal-loading">Loading...</p>`)
+  }
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
