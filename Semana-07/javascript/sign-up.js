@@ -87,7 +87,7 @@ function validateLastName(name) {
 // Validate DNI
 
 function validateDNI(num) {
-  if (num.length <= 7) {
+  if (num.length <= 7 || num.length >= 9) {
     return false
   } else if (!containNumbers(num)) {
     return false
@@ -247,7 +247,7 @@ btnSignUp.addEventListener('click', showResultsSignUp)
 
 // Keydown event
 
-var invalidChars = ['-', '+', 'e']
+var invalidChars = ['-', '+', 'e', '.']
 
 formDNI.addEventListener('keydown', function (e) {
   if (invalidChars.includes(e.key)) {
@@ -534,6 +534,18 @@ function fetchLogin(formName, formLastName, formDNI, formDate, formPhone, formAd
     })
     .then(function (jsonResponse) {
       console.log(jsonResponse)
+      modalInfo.innerHTML = (`<p>${jsonResponse.msg}</p>
+                              <p>User ID: ${jsonResponse.data.id}</p>
+                              <p>Name: ${jsonResponse.data.name}</p>
+                              <p>Last name: ${jsonResponse.data.lastName}</p>
+                              <p>DNI: ${jsonResponse.data.dni}</p>
+                              <p>Date of birthday: ${jsonResponse.data.dob}</p>
+                              <p>Phone: ${jsonResponse.data.phone}</p>
+                              <p>Address: ${jsonResponse.data.address}</p>
+                              <p>City: ${jsonResponse.data.city}</p>
+                              <p>Zip Code: ${jsonResponse.data.zip}</p>
+                              <p>Email: ${jsonResponse.data.email}</p>
+                              <p>Password: ${jsonResponse.data.password}</p>`)
     })
     .catch(function (error) {
       console.log('Error', error);
@@ -748,5 +760,30 @@ function showResultsSignUp() {
     p11.setAttribute("class", "msg-error")
     p11.innerHTML = "Password don't match. Try again"
     validationResult.appendChild(p11)
+  }
+}
+
+// Modal
+
+var modal = document.getElementById('my-modal');
+var modalInfo = document.getElementById('modal-info')
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+btnSignUp.onclick = function(e) {
+  if (!validate()) {
+    e.preventDefault
+  } else {
+    modal.style.display = "flex";
+    modalInfo.innerHTML = (`<p class="modal-loading">Loading...</p>`)
+  }
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
 }

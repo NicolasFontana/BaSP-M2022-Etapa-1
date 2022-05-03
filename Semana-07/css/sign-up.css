@@ -125,6 +125,72 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   text-align: center;
 }
 
+/* Modal */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #fefefe;
+  border: 1px solid #888;
+  width: 70%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #aaa;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #232F3E;
+  color: #FFF;
+}
+
+.modal-title p {
+  font-size: 30px;
+}
+
+
+.modal-information {
+  padding: 20px;
+  background: #FFF;
+  font-size: 20px;
+}
+
+.modal-information p {
+  line-height: 40px;
+}
+
+.modal-loading {
+  text-align: center;
+}
+
 
 
 @media only screen and (min-width: 768px)  {
@@ -147,6 +213,10 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   }
 
   .sign-up-form div:last-child input {
+    width: 50%;
+  }
+
+  .modal-content {
     width: 50%;
   }
 } 
