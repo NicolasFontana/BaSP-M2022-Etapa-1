@@ -29,6 +29,10 @@ var validationResult = document.getElementById('validation-result-sign-up')
 
 var signUpURL = 'https://basp-m2022-api-rest-server.herokuapp.com/signup'
 
+var modal = document.getElementById('my-modal');
+var modalInfo = document.getElementById('modal-info')
+var span = document.getElementsByClassName('close')[0];
+
 // Utilities
 
 function charIsLetter(char) {
@@ -533,19 +537,27 @@ function fetchLogin(formName, formLastName, formDNI, formDate, formPhone, formAd
       return response.json();
     })
     .then(function (jsonResponse) {
-      console.log(jsonResponse)
-      modalInfo.innerHTML = (`<p>${jsonResponse.msg}</p>
-                              <p>User ID: ${jsonResponse.data.id}</p>
-                              <p>Name: ${jsonResponse.data.name}</p>
-                              <p>Last name: ${jsonResponse.data.lastName}</p>
-                              <p>DNI: ${jsonResponse.data.dni}</p>
-                              <p>Date of birthday: ${jsonResponse.data.dob}</p>
-                              <p>Phone: ${jsonResponse.data.phone}</p>
-                              <p>Address: ${jsonResponse.data.address}</p>
-                              <p>City: ${jsonResponse.data.city}</p>
-                              <p>Zip Code: ${jsonResponse.data.zip}</p>
-                              <p>Email: ${jsonResponse.data.email}</p>
-                              <p>Password: ${jsonResponse.data.password}</p>`)
+      if (jsonResponse.success) {
+        modalInfo.innerHTML = (`<p>${jsonResponse.msg}</p>
+                                <p>User ID: ${jsonResponse.data.id}</p>
+                                <p>Name: ${jsonResponse.data.name}</p>
+                                <p>Last name: ${jsonResponse.data.lastName}</p>
+                                <p>DNI: ${jsonResponse.data.dni}</p>
+                                <p>Date of birthday: ${jsonResponse.data.dob}</p>
+                                <p>Phone: ${jsonResponse.data.phone}</p>
+                                <p>Address: ${jsonResponse.data.address}</p>
+                                <p>City: ${jsonResponse.data.city}</p>
+                                <p>Zip Code: ${jsonResponse.data.zip}</p>
+                                <p>Email: ${jsonResponse.data.email}</p>
+                                <p>Password: ${jsonResponse.data.password}</p>`)
+      } else {
+        modalInfo.innerHTML = ''
+        for (var i = 0; i < jsonResponse.errors.length; i++) {
+          var p = document.createElement('p')
+          p.innerHTML = `${jsonResponse.errors[i].msg}`
+          modalInfo.appendChild(p)
+        }
+      }
     })
     .catch(function (error) {
       console.log('Error', error);
@@ -764,10 +776,6 @@ function showResultsSignUp() {
 }
 
 // Modal
-
-var modal = document.getElementById('my-modal');
-var modalInfo = document.getElementById('modal-info')
-var span = document.getElementsByClassName("close")[0];
 
 span.onclick = function() {
   modal.style.display = "none";
